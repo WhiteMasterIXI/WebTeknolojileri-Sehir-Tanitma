@@ -1,14 +1,17 @@
-// geçişin ayarlanması
-let next = document.querySelector('.next')
-let prev = document.querySelector('.prev')
 
-next.addEventListener('click', function(){
-    let items = document.querySelectorAll('.item')
-    document.querySelector('.slide').appendChild(items[0])
-})
 
-prev.addEventListener('click', function(){
-    let items = document.querySelectorAll('.item')
-    document.querySelector('.slide').prepend(items[items.length - 1])
+const closeNavBtn = document.getElementById('close_btn');
+const openNavBtn = document.getElementById('open_btn');
+const Navmenu = document.getElementById('nav__items');
+
+closeNavBtn.addEventListener('click', () => {
+  Navmenu.style.display = 'none';
+  closeNavBtn.style.display = 'none';
+  openNavBtn.style.display = 'flex';
+});
+openNavBtn.addEventListener('click', () => {
+  Navmenu.style.display = 'flex';
+  openNavBtn.style.display = 'none';
+  closeNavBtn.style.display = 'flex';
 })
 

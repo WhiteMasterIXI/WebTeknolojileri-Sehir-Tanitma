@@ -54,6 +54,7 @@ img{
 section {
     height: 120vh;
     width: 100vw;
+    border-bottom: 2px solid var(--white--color);
 }
 
 
@@ -181,8 +182,11 @@ nav {
 
 .nav__items {
     display: flex;
-    gap: 6rem;
+    gap: 2rem;
 }
+
+
+
 .nav__pages {
     display: flex;
     gap: 1.2rem;
@@ -194,6 +198,31 @@ nav {
     border-radius: 0.6rem;
     transition: var(--normal--transition);
     border: 2px solid transparent;
+    animation: scroll-left 300ms 0s ease forwards;
+    opacity: 0;
+}
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(10rem);
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.nav__item:nth-child(2){
+    animation-delay: 0.3s;
+}
+.nav__item:nth-child(3){
+    animation-delay: 0.6s;
+}
+.nav__item:nth-child(4){
+    animation-delay: 0.9s;
+}
+.nav__item:nth-child(5){
+    animation-delay: 1.2s;
 }
 
 .nav__item a {
@@ -204,10 +233,29 @@ nav {
     transform: scale(1.2);
 }
 
-
-.nav__pages .active{
-    transform: scale(1.2);
+.nav__toggle-buttons .btn {
+    width: 3rem;
+    height: 3rem;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    border-radius: 50%;
+    background-color: transparent;
+    border: none;
+    color: white;
+    animation: shine 300ms 0ms ease forwards;
 }
+
+@keyframes shine {
+    0%{
+        opacity: 0.4;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
 
 /*================================= Menü ======================================*/
 
@@ -257,7 +305,6 @@ menu a:hover {
 /*================================= Home ======================================*/
 section:nth-child(odd){
     background: var(--section2--color);
-    border-bottom: 2px solid var(--white--color);
 }
 
 .section__container {
@@ -398,7 +445,7 @@ swiper-container {
     gap: 4rem;
     justify-content: center;
     color: white;
-    margin-left: 3rem;
+    margin-left: 5rem;
 }
 
 .personal__informations-right {
@@ -542,11 +589,51 @@ footer {
     section {
         height: 150vh;
     }
-    .nav__container {
-        justify-content: center;
-    }
-    .nav__items {
+    .nav__items{
+        position: absolute;
+        right: 1rem;
+        top: 4.8rem;
+        flex-direction: column;
+        gap: 0;
         display: none;
+    }
+
+    .nav__item {
+        background-color: rgb(5, 177, 245);
+        border-radius: 0;
+        border-bottom: 1px solid white;
+        width: 10rem;
+        height: 2.8rem;
+    }
+
+    
+    .nav__toggle-buttons .btn {
+        display: flex;
+    }
+    
+    .nav__toggle-buttons .close-btn{
+        display: none;
+    }
+
+    .nav__items .active {
+        background: rgb(13, 119, 218);
+    }
+
+    .nav__item:nth-child(1){
+        border-top: 1px solid white;;
+    }
+
+    .nav__item:hover {
+        transform: scale(1);
+    }
+
+    .nav__item:hover a {
+        letter-spacing: 0.1rem;
+        transition: all 350ms ease;
+    }
+
+    .nav__item a {
+        font-size: 1.3rem;
     }
     nav .nav__container{
         width: 90%;

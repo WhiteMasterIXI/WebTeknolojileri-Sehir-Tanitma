@@ -110,7 +110,7 @@
                 Sakarya Museum is open to visitors between 08:30 in the morning and 17:30 in the evening during the summer months and between 08:30 and 16:00 in the winter months.       
                 There is no entrance fee or entry restriction to enter Sakarya Museum.</p>
         </div>
-        <div class="container">
+        <div class="container container__photo">
             <div class="image"><img src="images/SakaryaM.jpg" alt=""></div>
             <div class="image"><img src="images/SakaryaMD.jpeg" alt=""></div>
         </div>
@@ -118,14 +118,36 @@
     </section>
     <section id="Slider" class="Slider-CountryPhotos">
         <swiper-container class="mySwiper swiper-h" pagination="true" pagination-clickable="true" space-between="50">
-            <swiper-slide><img src="images/SemihSay.jpeg" alt=""></swiper-slide>
-            <swiper-slide><img src="images/EnesErkan.jpeg"
-                    alt=""></swiper-slide>
-            <swiper-slide><img
-                    src="images/Tatankalar.jpeg"
-                    alt=""></swiper-slide>
-            <swiper-slide><img src="images/SeydaBurucu.jpeg" alt=""></swiper-slide>
-            <swiper-slide><img src="images/KenanSofuoğlu.jpeg" alt=""></swiper-slide>
+            <swiper-slide>
+              <div class="image__wrapper">
+                <img src="images/SemihSay.jpeg" alt="">
+                <a class="image__link" href="Semih.html">More İnformation</a>
+          </div>
+          </swiper-slide>
+            <swiper-slide>
+              <div class="image__wrapper">
+              <img src="images/EnesErkan.jpeg" alt="">
+              <a class="image__link" href="Enes.html">More İnformation</a>
+              </div>
+            </swiper-slide>
+            <swiper-slide>
+              <div class="image__wrapper">
+                <img src="images/SeydaBurucu.jpeg" alt="">
+                <a class="image__link" href="Seyda.html">More İnformation</a>
+          </div>
+            </swiper-slide>
+            <swiper-slide>
+              <div class="image__wrapper">
+                <img src="images/Tatankalar.jpeg" alt="">
+                <a class="image__link" href="Tatankalar.html">More İnformation</a>
+          </div>
+            </swiper-slide>
+            <swiper-slide>
+              <div class="image__wrapper">
+                <img src="images/KenanSofuoğlu.jpeg" alt="">
+                <a class="image__link" href="Kenan.html">More İnformation</a>
+          </div>
+            </swiper-slide>
         </swiper-container>
     </section>
 
@@ -163,7 +185,7 @@
   const marker6 = L.marker([40.39217154418295, 30.493808711604245]).addTo(map);
   // Marker'a yazı (popup) ekleme
   marker.bindPopup("<a href=\"https://www.sakarya.edu.tr/\" target=\"_blank\">Sakarya Müzesi</a>").openPopup();
-  marker2.bindPopup("<a href=\"https://www.sakarya.edu.tr/\" target=\"_blank\">Bayrak Tepe</a>").openPopup();
+  marker2.bindPopup("<a href=\"https://kulturportali.gov.tr/turkiye/sakarya/gezilecekyer/hendek-bayraktepe\" target=\"_blank\">Bayrak Tepe</a>").openPopup();
   marker3.bindPopup("<a href=\"https://www.sakarya.edu.tr/\" target=\"_blank\">Harmantepe Kalesi</a>").openPopup();
   marker4.bindPopup("<a href=\"https://www.sakarya.edu.tr/\" target=\"_blank\">Justinaus Köprüsü</a>").openPopup();
   marker5.bindPopup("<a href=\"https://www.sakarya.edu.tr/\" target=\"_blank\">Cami i Cedid</a>").openPopup();

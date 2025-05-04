@@ -185,12 +185,6 @@ nav {
     gap: 2rem;
 }
 
-.nav__pages {
-    display: flex;
-    gap: 1.2rem;
-    align-items: center;
-}
-
 .nav__item {
     padding: 0.4rem 0.8rem;
     border-radius: 0.6rem;
@@ -231,6 +225,9 @@ nav {
     transform: scale(1.2);
 }
 
+.nav__toggle-buttons {
+    display: none;
+}
 .nav__toggle-buttons .btn {
     width: 3rem;
     height: 3rem;
@@ -479,6 +476,7 @@ swiper-container {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
   }
 
   swiper-slide img {
@@ -491,6 +489,34 @@ swiper-container {
   .swiper-v {
     background: #eee;
   }
+
+  .image__wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .image__wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  
+  .image__link {
+    position: absolute;
+    bottom: 4rem; /* Alt kısımdan yukarı 20px */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.6); /* Arka plan koyu, saydam */
+    color: white;
+    padding: 8px 16px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    z-index: 2;
+  }
+
 
 
 /*================================= About Me ======================================*/
@@ -627,7 +653,107 @@ ul li:nth-child(1) .circle {
     align-items: center;
     justify-content: center;
   }
+/*====================Api Css====================*/
 
+  .card {
+    width: 90%;
+    height: 70%;
+    max-width: 470px;
+    background: linear-gradient(135deg, #0077fe, #5b548a);
+    color: white;
+    border-radius: 20px;
+    padding: 40px 35px;
+    text-align: center;
+}
+
+.search {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.search input {
+    border: 0;
+    outline: 0;
+    background: #ebfffc;
+    color: #555;
+    padding: 10px 25px;
+    height: 60px;
+    border-radius: 30px;
+    flex: 1;
+    margin-right: 16px;
+    font-size: 18px;
+    width: 100%;
+}
+
+.search button {
+    border: 0;
+    outline: 0;
+    background: #ebfffc;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+}
+
+.search button img {
+    width: 2rem;
+    margin-left: 0.85rem;
+}
+
+.weather-icon {
+    width: 170px;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    margin-left: 7rem;
+}
+
+.weather h1 {
+    font-size: 80px;
+    font-weight: 500;
+}
+
+.weather h2 {
+    font-size: 45px;
+    font-weight: 400;
+    margin-top: -10px;
+}
+
+.details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    margin-top: 50px;
+}
+
+.col {
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+
+.col img {
+    width: 40px;
+    margin-right: 10px;
+}
+.humidity, .wind {
+    font-size: 28px;
+    margin-top: -6px;
+}
+
+.weather {
+    display: none;
+}
+
+.error {
+    text-align: left;
+    margin-left: 10px;
+    font-size: 14px;
+    margin-top: 10px;
+    display: none;
+}
 /*================================= About My Country ======================================*/
 .Historical-Monument .section__container .container:nth-child(2)  {
     gap: 1rem;
@@ -676,6 +802,10 @@ footer {
         height: 2.8rem;
     }
 
+    .nav__toggle-buttons {
+        display: flex;
+    }
+
     
     .nav__toggle-buttons .btn {
         display: flex;
@@ -713,7 +843,7 @@ footer {
         flex-direction: column;
     }
 
-    .Home .section__container .left__container {
+    .Home .section__container .container {
         width: 60%;
         align-items: center;
     }
@@ -735,9 +865,42 @@ footer {
         height: 1rem;
     }
 
+    .weather-icon {
+        
+        margin-bottom: 4rem;
+    }
     /*================= About Me ===================*/
     .AboutMe .personal__informations-right{
         width: 50vw;
         margin-left: 3rem;
     }
+
+    /*================= About Me ===================*/
+    .MyCountry .section__container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .MyCountry .section__container .container {
+        width: auto;
+        height: 18rem;
+    }
+    .Historical-Monument .section__container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 3rem;
+    }
+
+    .Historical-Monument .section__container .container {
+        width: 100vw;
+        height: 8rem;
+    }
+
+
+    .Historical-Monument .section__container .container__photo .image {
+        width: 26rem;
+    }
+    
 }

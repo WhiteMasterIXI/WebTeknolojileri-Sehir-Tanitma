@@ -6,6 +6,8 @@
     list-style: none;
     box-sizing: border-box;
     text-decoration: none;
+    border: none;
+    border-style: none;
 }
 
 html{
@@ -17,6 +19,8 @@ body{
     background: rgb(72, 174, 241);
     transition: all 350ms ease;
     overflow-x: hidden;
+    color: white;
+    
 }
 
 h1 {
@@ -52,6 +56,7 @@ img{
 }
 
 section {
+    background: #31c0f8;
     height: 120vh;
     width: 100vw;
     border-bottom: 2px solid var(--white--color);
@@ -298,8 +303,24 @@ menu a:hover {
 }
 
 /*================================= Home ======================================*/
+.Message__Container {
+    padding: 0.8rem 1.4rem;
+    margin-bottom: 1rem;
+    border-radius: 0.5rem;
+}
+
+.Message__Container.Success {
+    background: hsl(156, 100%, 38%, 15%) ;
+    color: #00c476;
+}
+
+.Message__Container.Error {
+    background: hsla(346, 89%, 35%, 0.61);
+    color: #da0f3f;
+}
+
 section:nth-child(odd){
-    background: var(--section2--color);
+    background: rgb(61, 203, 247);
 }
 
 .section__container {
@@ -766,8 +787,82 @@ ul li:nth-child(1) .circle {
     padding: 2rem;
     border-radius: 2rem;
 }
+/*================================= Form ======================================*/
+.form__section {
+    display: grid;
+    place-items: center;
+    height: 140vh;
+    background: #54d6f7;
+}
 
+.form__section-container {
+    width: 40%;
+}
 
+.alert__message {
+    padding: 0.8rem 1.4rem;
+    margin-bottom: 1rem;
+    border-radius: 0.5rem;
+}
+
+.alert__message.error {
+    background: rgb(218, 53, 53);
+    color: red;
+}
+
+.alert__message.success {
+    background: rgb(88, 243, 88);
+    color: rgb(43, 230, 43);
+}
+
+.alert__message.lg {
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.form__control {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.form__control.inline {
+    flex-direction: row;
+    align-items: center;
+}
+
+input, textarea, select {
+    padding: 0.8rem 1.4rem;
+    background: #37a7f1;
+    border-radius: 0.3rem;
+    resize: none;
+    color: white;
+}
+
+.form__section small {
+    margin-top: 1rem;
+    display: block;
+}
+
+.form__section small a {
+    color: #12afec;
+}
+
+.btn {
+    display: inline-block;
+    width: fit-content;
+    padding: 0.6rem 1.2rem;
+    background-color: rgb(11, 90, 155);
+    border-radius: 0.8rem;
+    cursor: pointer;
+    transition: all 300ms ease;
+    color: white;
+}
 /*================================= Footer ======================================*/
 footer {
     width: 100vw;
@@ -875,7 +970,7 @@ footer {
         margin-left: 3rem;
     }
 
-    /*================= About Me ===================*/
+    /*================= Country İntroduction ===================*/
     .MyCountry .section__container {
         flex-direction: column;
         justify-content: center;

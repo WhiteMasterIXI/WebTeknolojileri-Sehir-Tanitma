@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/webtekno/static/css/main.c5cae253.css",
+    "main.js": "/webtekno/static/js/main.a6064c84.js",
+    "static/media/profil.jpg": "/webtekno/static/media/profil.8bd98c4c499bf70b78e7.jpg",
+    "static/media/Contact.jpg": "/webtekno/static/media/Contact.a56c07ccbc76b921cf3f.jpg",
+    "static/media/Chess.jpeg": "/webtekno/static/media/Chess.7e1c7850c39339f8db25.jpeg",
+    "static/media/Lise.jpg": "/webtekno/static/media/Lise.124774bf01416fd07f20.jpg",
+    "static/media/Universty.jpg": "/webtekno/static/media/Universty.51393e4fb1578f2b1cdc.jpg",
+    "static/media/SemihSay.jpeg": "/webtekno/static/media/SemihSay.d5de962503c90fb7fa91.jpeg",
+    "static/media/Draw.jpeg": "/webtekno/static/media/Draw.649b65a743d83f964055.jpeg",
+    "static/media/SakaryaM.jpg": "/webtekno/static/media/SakaryaM.dc200c5d13ae03c6adeb.jpg",
+    "static/media/Tatankalar.jpeg": "/webtekno/static/media/Tatankalar.c7943cf9d2139b020212.jpeg",
+    "static/media/KenanSofuoğlu.jpeg": "/webtekno/static/media/KenanSofuoğlu.587479f2997a2dc12f3e.jpeg",
+    "static/media/SakaryaMD.jpeg": "/webtekno/static/media/SakaryaMD.4fc343cd25853ad18934.jpeg",
+    "index.html": "/webtekno/index.html",
+    "main.c5cae253.css.map": "/webtekno/static/css/main.c5cae253.css.map",
+    "main.a6064c84.js.map": "/webtekno/static/js/main.a6064c84.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c5cae253.css",
+    "static/js/main.a6064c84.js"
+  ]
+}

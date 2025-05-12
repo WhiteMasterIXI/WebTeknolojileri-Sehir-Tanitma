@@ -1,0 +1,70 @@
+<!DOCTYPE php>
+<php lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <link rel="stylesheet" href="style.css">
+    <title>About Page</title>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+</head>
+
+<body>
+    <!--====================== Navbar ===========================-->
+    <nav>
+        <div class="nav__container">
+            <div class="nav__logo">
+                <div class="logo__image">
+                    <div class="back__side">
+                        <div class="face__background">
+                            <div class="face ">
+                                <div class="face__up ">
+                                    <div class="eye"></div>
+                                    <div class="eye"></div>
+                                </div>
+                                <div class="face__down"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="index.php">
+                    <h1>Sakarya</h1>
+                </a>
+            </div>
+            <ul class="nav__items" id="nav__items">
+                <li class="nav__item active"><a href="index.php">Home</a></li>
+                <li class="nav__item"><a href="about.php">About</a></li>
+                <li class="nav__item"><a href="contact.php">Contact</a></li>
+                <li class="nav__item"><a href="login.php">Login</a></li>
+              </ul>
+              
+              <div class="nav__toggle-buttons">
+                <button class="close-btn btn" id="close_btn"><i class="uil uil-times"></i></button>
+                <button class="open-btn btn" id="open_btn"><i class="uil uil-bars"></i></button>
+              </div>
+        </div>
+    </nav>
+    <!--====================== Menü ===========================-->
+    <menu class="float__menu">
+        <a href="#Home" class="active"><i class="uil uil-estate"></i></a>
+        <a href="#About"><i class="uil uil-books"></i></a>
+        <a href="#Services"><i class="uil uil-bag-alt"></i></a>
+        <a href="#Contact"><i class="uil uil-phone"></i></a>
+    </menu>
+    
+    <!--====================== sections ===========================-->
+
+    <section class="info-section">
+        <div class="section__container">
+            <div class="container">
+            <h1>Tatankalar</h1>
+            <p>Sakarya Tatankas is the American Football team of Sakarya University. The team entered the establishment process in the fall of 2002 as a result of the optimistic work of Sakarya University students, and carried out basic establishment activities such as forming the team, exchanging ideas and obtaining information in 2002-2003.</p>
+        </div>
+    </div>
+    </section>
+
+    <script src="main.js"></script>
+</body>
+
+</php>

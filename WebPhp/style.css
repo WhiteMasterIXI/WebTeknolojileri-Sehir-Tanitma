@@ -1,0 +1,1165 @@
+@import url('https://fonts.googleapis.com/css2?family=Racing+Sans+One&family=Smooch+Sans:wght@100..900&display=swap');
+/*================================= General Settings ======================================*/
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    border-style: none;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: Racing Sans One;
+    background: rgb(72, 174, 241);
+    transition: all 350ms ease;
+    overflow-x: hidden;
+    color: white;
+    
+}
+
+h1 {
+    font-size: 2.4rem;
+    line-height: 2.2rem;
+}
+
+h2 {
+    font-size: 2.1rem;
+}
+
+h3 {
+    font-size: 1.8rem;
+}
+
+h4 {
+    font-size: 1.5rem;
+}
+
+h5 {
+    font-size: 1.2rem;
+}
+
+p {
+    font-size: 1rem;
+    color: var(--white--color);
+}
+
+img{
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+
+section {
+    background: #31c0f8;
+    width: 100vw;
+    border-bottom: 2px solid var(--white--color);
+}
+
+.Historical-Monument,.MyCountry,.Slider-CountryPhotos,.contact,.info-section,.form__section,.Swiper-İmage,.AboutMe,.Home,.Weather-Api
+{
+    height: 120vh;
+    background: transparent;
+}
+/*================================= Root of Css ======================================*/
+:root {
+ /* colors */
+ --background--color: rgb(24, 154, 240);
+ --background-second--color: rgb(46, 163, 241);
+ --button--color: rgb(3, 148, 245);
+ --font--color: rgb(255, 255, 255);
+ --symbol--color: rgb(255, 255, 255);
+ --white--color: rgb(255, 255, 255);
+ 
+
+ /* width settings*/
+ --container--width-lg: 72%;
+ --container--width-sm: 82%;
+
+ /* transition settings */
+ --fast--transition: all 200ms ease;
+ --normal--transition: all 350ms ease;
+}
+/*================================= Logo ======================================*/
+.logo__image .back__side{
+ width: 4.2rem;
+ aspect-ratio: 1/1;
+ background: var(--white--color);
+ border-radius: 50%;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ box-shadow: 0 0 4px black;
+}
+
+.face__background {
+    width: 3.8rem;
+    aspect-ratio: 1/1;
+    background: var(--background--color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: inset 1.4px -1.4px 2.8px rgba(0, 0, 0, 0.493),inset -1.4px 1.4px 2.8px rgba(0, 0, 0, 0.541);
+}
+
+.face {
+    width: 2.8rem;
+    aspect-ratio: 1/1;
+    background: var(--white--color);
+    border-radius: 50%;
+    box-shadow: -2px 2px 3px rgba(0, 0, 0, 0.507);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: var(--normal--transition);
+}
+
+.face__up {
+    display: flex;
+    gap: 0.6rem;
+}
+.face__up .eye{
+    background: var(--background--color);
+    width: 0.55rem;
+    height: 0.55rem;
+    border-radius: 50%;
+    margin-top: 0.4rem;
+    box-shadow: inset -1.4px 1.4px 2.8px rgba(0, 0, 0, 0.493);
+    transition: var(--normal--transition);
+}
+.face__down {
+    background: rgb(24, 154, 240);
+    width: 0.4rem;
+    height: 0.16rem;
+    border-radius: 0 0 2px 2px;
+    margin-top: 0.1rem;
+    box-shadow: inset -1px 1px 2.8px rgba(0, 0, 0, 0.493);
+    transition: var(--normal--transition);
+}
+
+.face:hover .face__up .eye {
+    transform: scaleY(0.12);
+}
+
+.face:hover .face__down {
+    border-radius: 50%;
+    transform: scaleY(1.6);
+}
+
+
+/*================================= Navbar ======================================*/
+
+nav {
+    width: 100vw;
+    height: 4.8rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: transparent;
+    backdrop-filter: blur(4px);
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    transition: var(--normal--transition);
+}
+
+.nav__container {
+    width: var(--container--width-sm);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav__logo{
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+.nav__logo h1 {
+    color: rgba(255, 255, 255);
+    transition: var(--normal--transition);
+}
+
+.nav__items {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav__item {
+    padding: 0.4rem 0.8rem;
+    border-radius: 0.6rem;
+    transition: var(--normal--transition);
+    border: 2px solid transparent;
+    animation: scroll-left 300ms 0s ease forwards;
+    opacity: 0;
+}
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(10rem);
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.nav__item:nth-child(2){
+    animation-delay: 0.3s;
+}
+.nav__item:nth-child(3){
+    animation-delay: 0.6s;
+}
+.nav__item:nth-child(4){
+    animation-delay: 0.9s;
+}
+.nav__item:nth-child(5){
+    animation-delay: 1.2s;
+}
+
+.nav__item a {
+    color: rgba(255, 255, 255);
+}
+
+.nav__item:hover{
+    transform: scale(1.2);
+}
+
+.nav__toggle-buttons {
+    display: none;
+}
+.nav__toggle-buttons .btn {
+    width: 3rem;
+    height: 3rem;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    border-radius: 50%;
+    background-color: transparent;
+    border: none;
+    color: white;
+    animation: shine 300ms 0ms ease forwards;
+}
+
+@keyframes shine {
+    0%{
+        opacity: 0.4;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+
+/*================================= Menü ======================================*/
+
+menu {
+    position: fixed;
+    bottom: 2rem;
+    left: 50%;
+    z-index: 10;
+    transform: translateX(-50%);
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    width: fit-content;
+    height: 4.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.4rem;
+    padding: 0.7rem;
+    border-radius: 2.2rem;
+}
+
+menu a {
+    color: var(--background--color);
+    width: 3.2rem;
+    aspect-ratio: 1/1;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    font-size: 1rem;
+    transition: all 350ms ease;
+}
+
+menu a.active {
+    border: 1px solid rgb(24, 154, 240);
+    background: var(--button--color);
+    color: var(--font--color);
+    box-shadow: 0 0 1rem rgb(46, 163, 241);
+}
+
+menu a:hover {
+    background: var(--background--color);
+    color: var(--font--color);
+    box-shadow: 0 0 1rem var(--background--color);
+}
+
+/*================================= Home ======================================*/
+.Message__Container {
+    padding: 0.8rem 1.4rem;
+    margin-bottom: 1rem;
+    border-radius: 0.5rem;
+}
+
+.Message__Container.Success {
+    background: hsl(156, 100%, 38%, 15%) ;
+    color: #00c476;
+}
+
+.Message__Container.Error {
+    background: hsla(346, 89%, 35%, 0.61);
+    color: #da0f3f;
+}
+
+section:nth-child(odd){
+    background: rgb(61, 203, 247);
+}
+
+.section__container {
+    display: flex;
+    width: 100vw;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+.section__container h1 {
+    color: var(--font--color);
+}
+
+.container {
+    width: 40vw;
+    color: var(--font--color);
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.right__container {
+    width: 36vw;
+    aspect-ratio: 1/1;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: up-down 4s ease-in-out infinite;
+    transition: var(--normal--transition);
+    border-radius: 50%;
+}
+
+
+.image__container {
+    width: 32vw; /* Ekran genişliğine bağlı olarak dinamik genişlik */
+    aspect-ratio: 1 / 1;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+}
+  
+  /* Hover olduğunda efekt gelsin */
+  .image__container:hover::before {
+    left: 0;
+    border-radius: 1rem;
+  }
+
+  .image__container:hover img{
+    filter: saturate(0);
+  }
+  .image__container:hover .overlay-slide{
+    opacity: 1;
+  }
+  
+  .image__container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(0, 123, 255, 0.5), rgba(0, 200, 255, 0.5),rgba(0,0,0,0.6)); /* istediğin renkler */
+    transition: all 1s ease;
+    z-index: 2;
+    border-radius: 50%;
+  }
+  
+  /* Görselin üstüne çıkacak efektin düzgün görünmesi için */
+  .image__container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: 1;
+    filter: saturate(0.6);
+    transition: all 550ms ease;
+    border-radius: 50%;
+  }
+
+  .overlay-slide {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white; /* yazı rengi */
+    font-size: 1.2rem;
+    font-weight: bold;
+    z-index: 3; /* her şeyin üstünde olsun */
+    text-align: center;
+    opacity: 0;
+    transition: all 500ms ease;
+  }
+
+  ul li:nth-child(2) .overlay-slide{
+    top: 50%;
+    left: 10%;
+    font-size: 4rem;
+    height: 2rem;
+    width: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(228, 6, 6);
+    background: white;
+  }
+
+
+
+@keyframes up-down {
+    0% {
+        transform: translateY(-3rem);
+    }
+    50% {
+        transform: translateY(0rem);
+    }
+    100%{
+        transform: translateY(-3rem);
+    }
+    
+}
+
+.social__links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.social__links a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    background: var(--button--color);
+    border-radius: 50%;
+    color: var(--font--color);
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: 0.3s;
+}
+
+.social__links a:nth-child(2){
+    background: rgb(38, 193, 255);
+}
+
+.social__links a:nth-child(3){
+    background: rgb(255, 255, 255);
+    color: red;
+}
+
+.social__links a:nth-child(4){
+    background: rgb(2, 255, 2);
+}
+
+.social__links a:hover {
+    transform: scale(1.1);
+}
+
+swiper-container {
+    width: 100%;
+    height: 100%;
+  }
+
+  swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+
+  swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .swiper-v {
+    background: #eee;
+  }
+
+  .image__wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .image__wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  
+  .image__link {
+    position: absolute;
+    bottom: 4rem; /* Alt kısımdan yukarı 20px */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.6); /* Arka plan koyu, saydam */
+    color: white;
+    padding: 8px 16px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    z-index: 2;
+  }
+
+
+
+/*================================= About Me ======================================*/
+.personal__informations-left {
+    width: 25vw;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    justify-content: center;
+    color: white;
+    margin-left: 5rem;
+}
+
+.personal__informations-right {
+    margin-top: 2.6rem;
+    width: 75%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4rem;
+    padding: 0rem 2rem;
+    margin-bottom: 2rem;
+}
+
+.personal__informations-right h4 {
+    color: white;
+}
+
+.personal__informations-left .mini__title {
+    font-size: 1.4rem;
+}
+
+.personal__informations-left a {
+    color: white;
+}
+
+.personal__informations-left .Programing_Languages, .personal__informations-left .Languages {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.personal__informations-left .Programing_Languages ul, .personal__informations-left .Languages ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.personal__informations-left .Programing_Languages li, .personal__informations-left .Languages li {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.personal__informations-left .Programing_Languages li p {
+    width: 2.9rem;
+}
+
+.personal__informations-left .Languages li p {
+ width: 4.4rem;
+}
+
+.personal__informations-left .Programing_Languages li .progress__bar {
+    width: 8rem;
+    height: 1.2rem;
+    background-color: white; 
+    border-radius: 0.6rem;
+}
+.personal__informations-left .Programing_Languages li .progress__bar .progress__percentages{
+    background: rgb(33, 108, 248);
+    border-radius: 0.6rem;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+.personal__informations-left .Programing_Languages li:nth-child(1) .progress__bar .progress__percentages {
+    width: 60%;
+}
+
+.personal__informations-left .Programing_Languages li:nth-child(2) .progress__bar .progress__percentages {
+    width: 70%;
+}
+
+.personal__informations-left .Programing_Languages li:nth-child(3) .progress__bar .progress__percentages {
+    width: 80%;
+}
+
+.personal__informations-left .Programing_Languages li:nth-child(4) .progress__bar .progress__percentages {
+    width: 60%;
+}
+
+.personal__informations-left .Programing_Languages li:nth-child(5) .progress__bar .progress__percentages {
+    width: 40%;
+}
+
+/*================================= Circle Progressbar ======================================*/
+ul li:nth-child(1) .circle {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  background: conic-gradient(#eee 0% 26%,rgb(33, 108, 248) 25% 91%, #eee 91% 100%);
+  font-size: 22px;
+  font-weight: bold;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotate(-90deg);
+  }
+
+  ul li:nth-child(2) .circle {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background: conic-gradient(#eee 0% 26%,rgb(33, 108, 248) 25% 58%, #eee 58% 100%);
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(-90deg);
+    }
+  
+  .inner {
+    height: 80%;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background: rgb(46, 163, 241);
+    transform: rotate(90deg); /* Yazıyı düz çevirmek için */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+/*====================Api Css====================*/
+
+  .card {
+    width: 90%;
+    height: 70%;
+    max-width: 470px;
+    background: linear-gradient(135deg, #0a91df, #25b0f0,#25b0f0,#0a91df);
+    color: white;
+    border-radius: 20px;
+    padding: 40px 35px;
+    text-align: center;
+    border: 2px solid white;
+}
+
+.search {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.search input {
+    border: 0;
+    outline: 0;
+    background: #ebfffc;
+    color: #555;
+    padding: 10px 25px;
+    height: 60px;
+    border-radius: 30px;
+    flex: 1;
+    margin-right: 16px;
+    font-size: 18px;
+    width: 100%;
+}
+
+.search button {
+    border: 0;
+    outline: 0;
+    background: #ebfffc;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+}
+
+.search button img {
+    width: 2rem;
+    margin-left: 0.85rem;
+}
+
+.weather-icon {
+    width: 170px;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    margin-left: 7rem;
+}
+
+.weather h1 {
+    font-size: 80px;
+    font-weight: 500;
+}
+
+.weather h2 {
+    font-size: 45px;
+    font-weight: 400;
+    margin-top: -10px;
+}
+
+.details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    margin-top: 50px;
+}
+
+.col {
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+
+.col img {
+    width: 40px;
+    margin-right: 10px;
+}
+.humidity, .wind {
+    font-size: 28px;
+    margin-top: -6px;
+}
+
+.weather {
+    display: none;
+}
+
+.error {
+    text-align: left;
+    margin-left: 10px;
+    font-size: 14px;
+    margin-top: 10px;
+    display: none;
+}
+/*================================= About My Country ======================================*/
+.Historical-Monument .section__container .container:nth-child(2)  {
+    gap: 1rem;
+    height: auto;
+    width: auto;
+}
+.image {
+    width: 32vw;
+    background: white;
+    padding: 2rem;
+    border-radius: 2rem;
+}
+/*================================= Form ======================================*/
+.form__section {
+    display: grid;
+    place-items: center;
+    height: 140vh;
+    background: #54d6f7;
+}
+
+.form__section-container {
+    width: 40%;
+}
+
+.alert__message {
+    padding: 0.8rem 1.4rem;
+    margin-bottom: 1rem;
+    border-radius: 0.5rem;
+}
+
+.alert__message.error {
+    background: rgb(218, 53, 53);
+    color: red;
+}
+
+.alert__message.success {
+    background: rgb(88, 243, 88);
+    color: rgb(43, 230, 43);
+}
+
+.alert__message.lg {
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.form__control {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.form__control.inline {
+    flex-direction: row;
+    align-items: center;
+}
+
+input, textarea, select {
+    padding: 0.8rem 1.4rem;
+    background: #37a7f1;
+    border-radius: 0.3rem;
+    resize: none;
+    color: white;
+}
+
+.form__section small {
+    margin-top: 1rem;
+    display: block;
+}
+
+.form__section small a {
+    color: #12afec;
+}
+
+.btn {
+    display: inline-block;
+    width: fit-content;
+    padding: 0.6rem 1.2rem;
+    background-color: rgb(11, 90, 155);
+    border-radius: 0.8rem;
+    cursor: pointer;
+    transition: all 300ms ease;
+    color: white;
+}
+/*================================= Contact Form ======================================*/
+.dif_container {
+    width: 76%;
+    margin: 0 auto;
+}
+.contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.contact__container {
+    background: #058fb9;
+    padding: 4rem;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    gap: 4rem;
+    height: 30rem;
+    margin: 7rem auto;
+    border-radius: 1rem;;
+}
+
+/* ================ ASIDE ================= */
+.contact__aside {
+    background: #0da7ce;
+    padding: 3rem;
+    border-radius: 1rem;
+    position: relative;
+    bottom: 10rem;
+}
+
+.aside__image {
+    width: 12rem;
+    margin-bottom: 2rem;
+}
+
+.contact__aside h2 {
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+.contact__aside p {
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+}
+
+.contact__details li {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.contact__socials {
+    display: flex;
+    gap: 0.8rem;
+    margin-top: 3rem;
+}
+
+.contact__socials a {
+    background: #6ddcf8;;
+    padding: 0.5rem;
+    border-radius: 50%;
+    font-size: 0.9rem;
+    transition: all 400ms ease;
+    color: white;
+}
+
+.contact__socials a:hover {
+    background: transparent;
+}
+/* ================ FORM ================= */
+.contact__form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    margin-right: 4rem;
+}
+
+.form__name {
+    display: flex;
+    gap: 1.2rem;
+}
+
+
+
+.contact__form input, .contact__form textarea {
+    width: 100%;
+    padding: 1rem;
+    background: #14d8e6;
+    color: #fff;
+}
+
+.contact__form .btn {
+    width: max-content;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+
+
+
+
+
+/*================================= Footer ======================================*/
+footer {
+    width: 100vw;
+    height: 6rem;
+    background: rgb(14, 138, 221);
+}
+@media screen and (max-width: 1024px){
+    nav .nav__container{
+        width: 90%;
+    }
+
+    /* Contact */
+    .contact {
+         padding-bottom: 0; 
+    }
+
+    .contact__container {
+        gap: 1.5rem;
+        margin-top: 3rem;
+        height: auto;
+        padding: 1.5rem;
+    }
+
+    .contact__aside {
+        width: auto;
+        padding: 1.5rem;
+        bottom: 0;
+    }
+
+    .contact__form {
+        align-self: center;
+        margin-right: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 600px){
+    /*================= Navbar ===================*/
+    .AboutMe,.Weather-Api{
+        height: 155vh;
+    }
+    .MyCountry {
+        height: 160vh;
+    }
+    .Historical-Monument {
+        height: 170vh;
+    }
+    .contact {
+        height: 220vh;
+    }
+    .nav__items{
+        position: absolute;
+        right: 1rem;
+        top: 4.8rem;
+        flex-direction: column;
+        gap: 0;
+        display: none;
+    }
+
+    .nav__item {
+        background-color: rgb(5, 177, 245);
+        border-radius: 0;
+        border-bottom: 1px solid white;
+        width: 10rem;
+        height: 2.8rem;
+    }
+
+    .nav__toggle-buttons {
+        display: flex;
+    }
+
+    
+    .nav__toggle-buttons .btn {
+        display: flex;
+    }
+    
+    .nav__toggle-buttons .close-btn{
+        display: none;
+    }
+
+    .nav__items .active {
+        background: rgb(13, 119, 218);
+    }
+
+    .nav__item:nth-child(1){
+        border-top: 1px solid white;;
+    }
+
+    .nav__item:hover {
+        transform: scale(1);
+    }
+
+    .nav__item:hover a {
+        letter-spacing: 0.1rem;
+        transition: all 350ms ease;
+    }
+
+    .nav__item a {
+        font-size: 1.3rem;
+    }
+    nav .nav__container{
+        width: 90%;
+    }
+    /*================= Home ===================*/
+    .Home .section__container {
+        flex-direction: column;
+    }
+
+    .Home .section__container .container {
+        width: 60%;
+        align-items: center;
+    }
+    .right__container {
+        width: 60%;
+        margin-bottom: 4.5rem;
+    }
+
+    .right__container .image__container {
+        width: 90%;
+    }
+    .right__container img{
+        width: 100%;;
+    }
+    ul li:nth-child(2) .overlay-slide {
+        left: 15%;
+        font-size: 3rem;
+        width: 1rem;
+        height: 1rem;
+    }
+
+    .weather-icon {
+        
+        margin-bottom: 4rem;
+    }
+    /*================= About Me ===================*/
+    .AboutMe .personal__informations-right{
+        width: 50vw;
+        margin-left: 3rem;
+    }
+
+    /*================= Country İntroduction ===================*/
+    .MyCountry .section__container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .MyCountry .section__container .container {
+        width: auto;
+        height: 18rem;
+    }
+    .Historical-Monument .section__container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 3rem;
+    }
+
+    .Historical-Monument .section__container .container {
+        width: 100vw;
+        height: 8rem;
+    }
+
+
+    .Historical-Monument .section__container .container__photo .image {
+        width: 26rem;
+    }
+
+    /* Contact */
+    .contact__container {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        margin-top: 0;
+        padding: 0;
+    }
+
+    .contact__form {
+        margin: 0 1.5rem 3rem;
+    }
+
+    .form__name {
+        flex-direction: column;;
+    }
+
+    .form__name input[type="text"] {
+        width: 100%;
+    }
+
+    .contact__aside {
+        width: 100%;
+        margin: 0 auto;
+    }
+    
+}

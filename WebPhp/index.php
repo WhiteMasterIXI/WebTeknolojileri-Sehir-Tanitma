@@ -1,7 +1,7 @@
     <?php
- include 'partials/header.php' 
+    include 'partials/header.php'
 
- ?>
+    ?>
     <!--====================== Menü ===========================-->
     <menu class="float__menu">
         <a href="#Home" class="active"><i class="uil uil-estate"></i></a>
@@ -13,20 +13,21 @@
     <section class="Home" id="Home">
         <div class="section__container">
             <div class="container">
-                <?php if(isset($_SESSION['success-message'])) : ?>
-                <div class="Message__Container Success">
-                    <?= $_SESSION['success-message']; unset($_SESSION['success-message'])?>
-                </div>
+                <?php if (isset($_SESSION['success-message'])) : ?>
+                    <div class="Message__Container Success">
+                        <?= $_SESSION['success-message'];
+                        unset($_SESSION['success-message']) ?>
+                    </div>
                 <?php endif ?>
                 <h2>Hello It's Me</h2>
                 <h1>Emre Koca</h1>
                 <h2>And I'am <span>Student</span></h2>
                 <p>This is My Portfolio Website</p>
                 <div class="social__links">
-                    <a href="https://www.facebook.com/"><i class="uil uil-facebook-f"></i></a>
-                    <a href="https://www.twitter.com/"><i class="uil uil-twitter"></i></a>
-                    <a href="https://www.gmail.com/"><i class="uil uil-envelope"></i></a>
-                    <a href=""><i class="uil uil-whatsapp"></i></a>
+                    <a href="https://www.facebook.com/" target="_blank"><i class="uil uil-facebook-f"></i></a>
+                    <a href="https://www.twitter.com/" target="_blank"><i class="uil uil-twitter"></i></a>
+                    <a href="https://www.gmail.com/" target="_blank"><i class="uil uil-envelope"></i></a>
+                    <a href="" target="_blank"><i class="uil uil-whatsapp"></i></a>
                 </div>
             </div>
             <div class="right__container">
@@ -36,7 +37,7 @@
                         <li>
                             <div class="overlay-slide">Welcome My Website</div>
                         </li>
-                        <li><a class="overlay-slide" href="https://www.youtube.com"><i class="uil uil-youtube"></i></a>
+                        <li><a class="overlay-slide" href="https://www.youtube.com" target="_blank"><i class="uil uil-youtube"></i></a>
                         </li>
                     </ul>
                 </div>
@@ -149,32 +150,29 @@
 
             <div class="card">
                 <div class="search">
-                    <input type="text" placeholder="enter city name" spellcheck="false">
+                    <input type="text" placeholder="Search Film" spellcheck="false">
                     <button><img src="images/search.png" alt=""></button>
                 </div>
-                <div class="error">
-                    <p>Invalid city name</p>
-                </div>
-                <div class="weather">
-                    <img src="images/clear.png" class="weather-icon">
-                    <h1 class="temp">22°C</h1>
-                    <h2 class="city">New York</h2>
-                    <div class="details">
-                        <div class="col">
-                            <img src="images/humidity_8691565.png">
-                            <div>
-                                <p class="humidity">50%</p>
-                                <p>Humidity</p>
-                            </div>
+                <div class="information__side">
+                    <div class="information__container">
+                        <div class="writer__side">
+                            <h4>Writer</h4>
+                            <p class="Writer"></p>
                         </div>
-                        <div class="col">
-                            <img src="images/wind-socket_2402912.png">
-                            <div>
-                                <p class="wind">15 km/h</p>
-                                <p>Wind Speed</p>
-                            </div>
+                        <div class="year__Side">
+                            <h4>Year</h4>
+                            <p class="Year"></p>
+                        </div>
+                        <div class="Plot__Side">
+                            <h4>Plot</h4>
+                            <p class="Plot"></p>
+                        </div>
+                        <div class="Imdb__Side">
+                            <h4>İmdb Point</h4>
+                            <p class="İmdbPoint"></p>
                         </div>
                     </div>
+                    <div class="film__image"><img src="" alt=""></div>
                 </div>
             </div>
 
@@ -182,70 +180,84 @@
         </div>
     </section>
     <footer>
+    <div class="footer__container">
+        <article>
+            <a href="index.php" class="footer__logo"><h3>WhiteMaster</h3></a>
+            <P>You can use below links for contact me</P>
+            <div>
+                <i class='bx bxs-phone-call'></i>
+                <small>+54123309055</small>
+            </div>
+            <div>
+                <i class='bx bx-envelope'></i>
+                <small>Emrekoca005@gmail.com</small>
+            </div>
+        </article>
 
-    </footer>
+        <article>
+            <h3>Permalinks</h3>
+            <div class="Pages">
+            <a href="index.php">Home</a>
+            <a href="about.php">About</a>
+            <a href="contact.php">Contact</a>
+        </div>
+        </article>
+
+        <article>
+            <h3>Contact Us</h3>
+            <p>Press</p>
+            <p>FAQs</p>
+            <div class="footer__socials">
+            <a href="#"><i class='bx bxl-linkedin' ></i></a>
+            <a href="#"><i class='bx bxl-twitter' ></i></a>
+            <a href="#"><i class='bx bxl-facebook-circle' ></i></a>
+            <a href="#"><i class='bx bxl-instagram' ></i></a>
+        </div>
+        </article>
+    </div>
+    <div class="copyright">
+        <small>&copy; Copyright Sakarya Website. All Rights Reserved.</small>
+    </div>
+</footer>
 
     <script>
+        const filmApi = "http://www.omdbapi.com/?apikey=569505d"
+        const filmApiKey = "569505d"
+        // sona bunu ekleyip film aratılıyor t=film_adi
 
         const apiKey = "485d86be4fc80a56d9a3585850d07a08"
+
         const apiUrl = "https://api.openweathermap.org/data/2.5/weather?=&units=metric&q=";
 
         const searchBox = document.querySelector(".search input");
         const searchBtn = document.querySelector(".search button");
-        const weatherIcon = document.querySelector(".weather-icon")
 
+        async function TakeApiInformation(FilmName) {
+            const response = await fetch(filmApi + `&t=${FilmName}`);
+            const data = await response.json();
 
-        async function checkWeather(city) {
-            const response = await fetch(apiUrl + city + `&appid=${apiKey}`);
-
-            if (response.status == 404) {
-                document.querySelector(".weather").style.display = "none";
-                document.querySelector(".error").style.display = "block";
+            if (data.Response === "False") {
+                alert("Film Bulunamadı");
+            } else {
+                console.log(data); // Kontrol için
+                //console.log(document.querySelector(".film__image img"));
+                document.querySelector(".Writer").innerHTML = data.Writer;
+                document.querySelector(".Year").innerHTML = data.Year;
+                document.querySelector(".Plot").innerHTML = data.Plot;
+                document.querySelector(".İmdbPoint").innerHTML = data.imdbRating;
+                document.querySelector(".film__image img").src = data.Poster;
             }
-            else {
-                var data = await response.json();
-
-                console.log(data);
-
-
-                document.querySelector(".city").innerphp = data.name;
-                document.querySelector(".temp").innerphp = Math.round(data.main.temp) + "°C";
-                document.querySelector(".humidity").innerphp = data.main.humidity + "%";
-                document.querySelector(".wind").innerphp = data.wind.speed + "km/h";
-
-                if (data.weather[0].main == "Clouds") {
-                    weatherIcon.src = "images/clouds.png"
-                }
-                else if (data.weather[0].main == "Clear") {
-                    weatherIcon.src = "images/clear.png"
-                }
-                else if (data.weather[0].main == "Rain") {
-                    weatherIcon.src = "images/rain.png"
-                }
-                else if (data.weather[0].main == "Drizzle") {
-                    weatherIcon.src = "images/drizzle.png"
-                }
-                else if (data.weather[0].main == "Mist") {
-                    weatherIcon.src = "images/mist.png"
-                }
-
-                document.querySelector(".weather").style.display = "block";
-                document.querySelector(".error").style.display = "none";
-            }
-
-
         }
 
 
         searchBtn.addEventListener("click", () => {
-            checkWeather(searchBox.value);
+            //checkWeather(searchBox.value);
+            TakeApiInformation(searchBox.value);
         })
-
-
-
     </script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
     <script src="main.js"></script>
-</body>
+    <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundles.min.js"></script>
+    </body>
 
     </html>

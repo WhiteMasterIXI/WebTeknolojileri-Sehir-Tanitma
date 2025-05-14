@@ -20,7 +20,6 @@ body{
     transition: all 350ms ease;
     overflow-x: hidden;
     color: white;
-    
 }
 
 h1 {
@@ -314,7 +313,7 @@ menu a:hover {
 
 .Message__Container.Success {
     background: hsl(156, 100%, 38%, 15%) ;
-    color: #00c476;
+    color: #02b36c;
 }
 
 .Message__Container.Error {
@@ -435,6 +434,7 @@ section:nth-child(odd){
     color: rgb(228, 6, 6);
     background: white;
   }
+
 
 
 
@@ -678,21 +678,33 @@ ul li:nth-child(1) .circle {
     justify-content: center;
   }
 /*====================Api Css====================*/
-
+.Weather-Api {
+    display: flex;
+    justify-content: center;
+}
+.Weather-Api .section__container {
+    width: 60%;
+}
   .card {
-    width: 90%;
+    width: 100%;
     height: 70%;
-    max-width: 470px;
     background: linear-gradient(135deg, #0a91df, #25b0f0,#25b0f0,#0a91df);
     color: white;
     border-radius: 20px;
     padding: 40px 35px;
     text-align: center;
     border: 2px solid white;
-}
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    flex-direction: column;
+    }
+
+    
 
 .search {
-    width: 100%;
+    width: 80%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -727,50 +739,35 @@ ul li:nth-child(1) .circle {
     margin-left: 0.85rem;
 }
 
-.weather-icon {
-    width: 170px;
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
-    margin-left: 7rem;
-}
-
-.weather h1 {
-    font-size: 80px;
-    font-weight: 500;
-}
-
-.weather h2 {
-    font-size: 45px;
-    font-weight: 400;
-    margin-top: -10px;
-}
-
-.details {
+.information__container {
+    height: 100%;
+    width: 50%;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 20px;
-    margin-top: 50px;
+    flex-direction: column;
+    justify-content: center;
 }
 
-.col {
+.information__side {
+    width: 100%;
+    height: 70%;
     display: flex;
-    align-items: center;
-    text-align: left;
+    justify-content: space-around;
 }
 
-.col img {
-    width: 40px;
-    margin-right: 10px;
-}
-.humidity, .wind {
-    font-size: 28px;
-    margin-top: -6px;
+.film__image {
+    height: 100%;
+    width: 40%;
 }
 
-.weather {
-    display: none;
+.film__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    border: 2px solid white;
+    border-radius: 1rem;
 }
+
+
 
 .error {
     text-align: left;
@@ -816,7 +813,7 @@ ul li:nth-child(1) .circle {
 
 .alert__message.success {
     background: rgb(88, 243, 88);
-    color: rgb(43, 230, 43);
+    color: rgb(141, 4, 4);
 }
 
 .alert__message.lg {
@@ -868,10 +865,6 @@ input, textarea, select {
     color: white;
 }
 /*================================= Contact Form ======================================*/
-.dif_container {
-    width: 76%;
-    margin: 0 auto;
-}
 .contact {
     display: flex;
     justify-content: center;
@@ -879,7 +872,7 @@ input, textarea, select {
     overflow: hidden;
 }
 .contact__container {
-    background: #058fb9;
+    background: #21a3ee;
     padding: 4rem;
     display: grid;
     grid-template-columns: 40% 60%;
@@ -887,15 +880,17 @@ input, textarea, select {
     height: 30rem;
     margin: 7rem auto;
     border-radius: 1rem;;
+    border: 2px solid white;
 }
 
 /* ================ ASIDE ================= */
 .contact__aside {
-    background: #0da7ce;
+    background: rgb(23, 183, 223);
     padding: 3rem;
     border-radius: 1rem;
     position: relative;
     bottom: 10rem;
+    border: 2px solid white;
 }
 
 .aside__image {
@@ -933,6 +928,7 @@ input, textarea, select {
     font-size: 0.9rem;
     transition: all 400ms ease;
     color: white;
+    border: 2px solid white;
 }
 
 .contact__socials a:hover {
@@ -956,14 +952,19 @@ input, textarea, select {
 .contact__form input, .contact__form textarea {
     width: 100%;
     padding: 1rem;
-    background: #14d8e6;
-    color: #fff;
+    background: #ffffff;
+    color: #000000;
 }
 
 .contact__form .btn {
     width: max-content;
     margin-top: 1rem;
     cursor: pointer;
+}
+
+.buttons {
+    display: flex;
+    gap: 2rem;
 }
 
 
@@ -973,12 +974,57 @@ input, textarea, select {
 /*================================= Footer ======================================*/
 footer {
     width: 100vw;
-    height: 6rem;
+    height: 15rem;
+}
+
+
+footer a {
+    color: white;
+}
+.footer__container {
+    width: 100vw;
+    height: 15rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
     background: rgb(14, 138, 221);
 }
+article {
+    height: 10rem;
+    width: 14rem;
+}
+
+.copyright {
+    width: 100%;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid white;
+}
+small {
+    width: auto;
+}
+
+.footer__socials {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.Pages {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/*================================= Media Queries ======================================*/
 @media screen and (max-width: 1024px){
     nav .nav__container{
         width: 90%;
+    }
+
+    .search {
+        margin-bottom: 2rem;
     }
 
     /* Contact */
@@ -991,6 +1037,8 @@ footer {
         margin-top: 3rem;
         height: auto;
         padding: 1.5rem;
+        align-items: center;
+        width: auto;
     }
 
     .contact__aside {
@@ -1007,18 +1055,6 @@ footer {
 
 @media screen and (max-width: 600px){
     /*================= Navbar ===================*/
-    .AboutMe,.Weather-Api{
-        height: 155vh;
-    }
-    .MyCountry {
-        height: 160vh;
-    }
-    .Historical-Monument {
-        height: 170vh;
-    }
-    .contact {
-        height: 220vh;
-    }
     .nav__items{
         position: absolute;
         right: 1rem;
@@ -1110,6 +1146,19 @@ footer {
     }
 
     /*================= Country İntroduction ===================*/
+    .AboutMe,.Weather-Api{
+        height: 155vh;
+    }
+    .MyCountry {
+        height: 160vh;
+    }
+    .Historical-Monument {
+        height: 170vh;
+    }
+    .contact {
+        height: 220vh;
+    }
+    
     .MyCountry .section__container {
         flex-direction: column;
         justify-content: center;
@@ -1124,7 +1173,6 @@ footer {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        margin-top: 3rem;
     }
 
     .Historical-Monument .section__container .container {
@@ -1136,8 +1184,33 @@ footer {
     .Historical-Monument .section__container .container__photo .image {
         width: 26rem;
     }
+    /*================= Film Api ===================*/
+    .search {
+        margin-bottom: 0;
+    }
+    .card {
+        width: 90vw;
+        height: auto;
+    }
+    .information__side {
+        flex-direction: column;
+    }
 
-    /* Contact */
+    .information__container{
+        width: 100%;
+        height: auto;
+    }
+
+    .film__image {
+        width: 100%;
+        height: 50%;
+    }
+
+    .film__image img {
+        width: 100%;
+    }
+
+    /*================= Contact ===================*/
     .contact__container {
         grid-template-columns: 1fr;
         gap: 3rem;
@@ -1159,7 +1232,18 @@ footer {
 
     .contact__aside {
         width: 100%;
-        margin: 0 auto;
     }
-    
+
+    .buttons {
+        gap: 1rem;
+    }
+    /*================= Contact ===================*/
+    .footer__container{
+        height: 42rem;
+        flex-direction: column;
+    }
+
+    footer {
+        height: 45rem;
+    }
 }

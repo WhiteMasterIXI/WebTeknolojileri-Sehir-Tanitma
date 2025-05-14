@@ -63,6 +63,46 @@
         </div>
     </div>
     </section>
+    <footer>
+    <div class="footer__container">
+        <article>
+            <a href="index.php" class="footer__logo"><h3>WhiteMaster</h3></a>
+            <P>You can use below links for contact me</P>
+            <div>
+                <i class='bx bxs-phone-call'></i>
+                <small>+54123309055</small>
+            </div>
+            <div>
+                <i class='bx bx-envelope'></i>
+                <small>Emrekoca005@gmail.com</small>
+            </div>
+        </article>
+
+        <article>
+            <h3>Permalinks</h3>
+            <div class="Pages">
+            <a href="index.php">Home</a>
+            <a href="about.php">About</a>
+            <a href="contact.php">Contact</a>
+        </div>
+        </article>
+
+        <article>
+            <h3>Contact Us</h3>
+            <p>Press</p>
+            <p>FAQs</p>
+            <div class="footer__socials">
+            <a href="#"><i class='bx bxl-linkedin' ></i></a>
+            <a href="#"><i class='bx bxl-twitter' ></i></a>
+            <a href="#"><i class='bx bxl-facebook-circle' ></i></a>
+            <a href="#"><i class='bx bxl-instagram' ></i></a>
+        </div>
+        </article>
+    </div>
+    <div class="copyright">
+        <small>&copy; Copyright Sakarya Website. All Rights Reserved.</small>
+    </div>
+</footer>
 
     <script src="main.js"></script>
 </body>

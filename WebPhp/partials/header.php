@@ -7,9 +7,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstraps.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="http://localhost/WebTeknolojiler/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <title>My City</title>
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    crossorigin=""
+  />
+  <style>
+    .Sakarya__Map {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    #map {
+      width: 100%;
+      height: 80vh;
+      z-index: 1;
+    }
+  </style>
 </head>
 
 <body>
@@ -35,7 +58,7 @@
                 </a>
             </div>
             <ul class="nav__items" id="nav__items">
-                <li class="nav__item active"><a href="index.php">Home</a></li>
+                <li class="nav__item"><a href="index.php">Home</a></li>
                 <li class="nav__item"><a href="about.php">About</a></li>
                 <li class="nav__item"><a href="contact.php">Contact</a></li>
                 <?php if(isset($_SESSION['isİnside'])) : ?>       

@@ -14,25 +14,25 @@
     <!--====================== sections ===========================-->
 
     <section class="contact">
-        <div class="dif_container contact__container">
+        <div class="contact__container">
             <aside class="contact__aside">
                 <div class="aside__image">
                     <img src="images/Contact.jpg">
                 </div>
                 <h2>Contact Us</h2>
-                <p>metin yaz bizimle iletişimle ilgili</p>
+                <p>Bir isteğiniz olursa bizimle iletişime geçebilirsiniz.</p>
                 <ul class="contact__details">
                     <li>
                         <i class="uil uil-phone-times"></i>
-                        <h5>+2335523456789</h5>
+                        <h5>+5412339055</h5>
                     </li>
                     <li>
                         <i class="uil uil-envelope"></i>
-                        <h5>suppor@egator.com</h5>
+                        <h5>EmreKoca005@gmail.com</h5>
                     </li>
                     <li>
                         <i class="uil uil-location-point"></i>
-                        <h5>Accra, Ghana</h5>
+                        <h5>Sakarya, Hendek</h5>
                     </li>
                 </ul>
                 <ul class="contact__socials">
@@ -43,14 +43,14 @@
                 </ul>
             </aside>
             <div id="app">
-            <form  action=https://formspree.io/f/xjkvyzae  method="POST" class="contact__form">
+            <form  action=contact_bilgiler.php  method="POST" class="contact__form">
                 <div class="form__name">
                     <input type="text" name="FirstName" v-model="name" placeholder="First Name" required>
                     <input type="text" name="LastName" v-model="surname"  placeholder="Last Name" required>
                 </div>
                 <div class="form__name">
-                <input type="phone" name="Phone" v-model="phone" placeholder="Your Email Address" required>
-                <input type="email" name="Email Address" v-model="email" placeholder="Your Email Address" required>
+                <input type="phone" name="Phone" v-model="phone" placeholder="Your Phone Number" required>
+                <input type="email" name="Email" v-model="email" placeholder="Your Email Address" required>
                 </div>
                 <textarea name="Message" rows="7" v-model="message" placeholder="Message" required></textarea>
                 <div class="buttons">
@@ -63,13 +63,54 @@
         </div>
         </div>
     </section>
+  
+    <footer>
+    <div class="footer__container">
+        <article>
+            <a href="index.php" class="footer__logo"><h3>WhiteMaster</h3></a>
+            <P>You can use below links for contact me</P>
+            <div>
+                <i class='bx bxs-phone-call'></i>
+                <small>+54123309055</small>
+            </div>
+            <div>
+                <i class='bx bx-envelope'></i>
+                <small>Emrekoca005@gmail.com</small>
+            </div>
+        </article>
+
+        <article>
+            <h3>Permalinks</h3>
+            <div class="Pages">
+            <a href="index.php">Home</a>
+            <a href="about.php">About</a>
+            <a href="contact.php">Contact</a>
+        </div>
+        </article>
+
+        <article>
+            <h3>Contact Us</h3>
+            <p>Press</p>
+            <p>FAQs</p>
+            <div class="footer__socials">
+            <a href="#"><i class='bx bxl-linkedin' ></i></a>
+            <a href="#"><i class='bx bxl-twitter' ></i></a>
+            <a href="#"><i class='bx bxl-facebook-circle' ></i></a>
+            <a href="#"><i class='bx bxl-instagram' ></i></a>
+        </div>
+        </article>
+    </div>
+    <div class="copyright">
+        <small>&copy; Copyright Sakarya Website. All Rights Reserved.</small>
+    </div>
+</footer>
      <script>
   // JS Kontrol fonksiyonu dışarıda kalacak
   function jsKontrol() {
     const name = document.querySelector('[name="FirstName"]').value.trim();
     const surname = document.querySelector('[name="LastName"]').value.trim();
     const phone = document.querySelector('[name="Phone"]').value.trim();
-    const email = document.querySelector('[name="Email Address"]').value.trim();
+    const email = document.querySelector('[name="Email"]').value.trim();
     const message = document.querySelector('[name="Message"]').value.trim();
 
     const errors = [];

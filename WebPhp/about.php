@@ -87,31 +87,54 @@ include 'partials/header.php'
       </swiper-slide>
     </swiper-container>
   </section>
-
-  <style>
-    html,
-    body {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-    }
-
-    .Sakarya__Map {
-      width: 100%;
-      height: 100vh;
-      /* Ekran yüksekliği kadar */
-    }
-
-    #map {
-      width: 100%;
-      height: 100%;
-    }
-  </style>
-  <section id="Map-Sakarya" class="Sakarya__Map" style="justify-content: center; display: flex; align-items: center;">
-    <div id="map" style="height: 90%; z-index: 2;"></div>
+  <section class="Sakarya__Map">
+    <div id="map"></div>
   </section>
 
-  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <footer>
+    <div class="footer__container">
+        <article>
+            <a href="index.php" class="footer__logo"><h3>WhiteMaster</h3></a>
+            <P>You can use below links for contact me</P>
+            <div>
+                <i class='bx bxs-phone-call'></i>
+                <small>+54123309055</small>
+            </div>
+            <div>
+                <i class='bx bx-envelope'></i>
+                <small>Emrekoca005@gmail.com</small>
+            </div>
+        </article>
+
+        <article>
+            <h3>Permalinks</h3>
+            <div class="Pages">
+            <a href="index.php">Home</a>
+            <a href="about.php">About</a>
+            <a href="contact.php">Contact</a>
+        </div>
+        </article>
+
+        <article>
+            <h3>Contact Us</h3>
+            <p>Press</p>
+            <p>FAQs</p>
+            <div class="footer__socials">
+            <a href="#"><i class='bx bxl-linkedin' ></i></a>
+            <a href="#"><i class='bx bxl-twitter' ></i></a>
+            <a href="#"><i class='bx bxl-facebook-circle' ></i></a>
+            <a href="#"><i class='bx bxl-instagram' ></i></a>
+        </div>
+        </article>
+    </div>
+    <div class="copyright">
+        <small>&copy; Copyright Sakarya Website. All Rights Reserved.</small>
+    </div>
+</footer>
+  <script
+    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    crossorigin=""
+  ></script>
   <script>
     const mapBounds = [
       [40, 29.5], // Güneybatı

@@ -1,0 +1,178 @@
+<?php 
+include 'partials/header.php'
+?>
+  <!--====================== Menü ===========================-->
+  <menu class="float__menu">
+    <a href="#MyCountry" class="active"><i class="uil uil-estate"></i></a>
+    <a href="#History"><i class="uil uil-books"></i></a>
+    <a href="#Slider"><i class="uil uil-bag-alt"></i></a>
+    <a href="#Sakarya__Map"><i class="uil uil-phone"></i></a>
+  </menu>
+
+  <!--====================== City İntroduce Sakarya ===========================-->
+
+  <section id="MyCountry" class="MyCountry">
+    <div class="section__container">
+      <div class="container">
+        <h1>Sakarya</h1>
+        <p>Sakarya is the most crowded 20th city in Turkey, Sakarya is
+          the most 5th country region of Marmara After İstanbul, Bursa, Kocaeli and Balıkesir.
+          It takes his name Sakarya River which in his region, Sakarya's capital is Adapazarı.
+          Adapazarı won a prize in Danimarka and with that Adapazarı knowns is the Bicycle Country.
+          Sakarya population is 1.098.115 this information depends on 2023 TÜİK's Researching.
+          Sakarya has 16 district (Town) and 668 Neigbourhood. It takes a part on Çatalca Kocaeli district of
+          Marmara Region. Sakarya Economy is generally depends on Agriculture, They Growing Nut also Corn in these Areas
+          Industry is developing in Capital of Sakarya (Adapazarı). Industriel Establishments increased
+          these industrialization Recently Years
+        </p>
+      </div>
+      <div class="container">
+        <h1>Sport Country Sakarya</h1>
+        <p>Sakarya is a Sport Country Which to raise BWA and UMB Earth third Banth Champion Semih Saygıner in Billiards
+          Supersport Earth Champion Kenan Sofuoğlu in Motorcycle Race
+          In Karate Enes Erkan and Şeyda Burucu as a lot of well known Athletes
+        </p>
+        <p>Tatankalar represent our country in Super League American Football and they are too successfull in this sport.
+          Tatankalar which consisting university student, to exhibit Very Succesful Progress Among the University and Super League
+        </p>
+      </div>
+    </div>
+  </section>
+  <section id="History" class="Historical-Monument">
+    <div class="section__container">
+      <div class="container">
+        <h1>Sakarya Museum</h1>
+        <p>Sakarya Museum is located approximately 3 km from Sakarya city center. Transportation to Sakarya Museum is easily possible by private vehicles, taxis and public transportation.
+          Sakarya Museum is a very old building where Gazi Mustafa Kemal Atatürk and his mother stayed. Sakarya Museum contains many archaeological and ethnographic artifacts.
+          Sakarya Museum is open to visitors between 08:30 in the morning and 17:30 in the evening during the summer months and between 08:30 and 16:00 in the winter months.
+          There is no entrance fee or entry restriction to enter Sakarya Museum.</p>
+      </div>
+      <div class="container container__photo">
+        <div class="image"><img src="images/SakaryaM.jpg" alt=""></div>
+        <div class="image"><img src="images/SakaryaMD.jpeg" alt=""></div>
+      </div>
+    </div>
+  </section>
+  <section id="Slider" class="Slider-CountryPhotos">
+    <swiper-container class="mySwiper swiper-h" pagination="true" pagination-clickable="true" space-between="50">
+      <swiper-slide>
+        <div class="image__wrapper">
+          <img src="images/SemihSay.jpeg" alt="">
+          <a class="image__link" href="Semih.php">More İnformation</a>
+        </div>
+      </swiper-slide>
+      <swiper-slide>
+        <div class="image__wrapper">
+          <img src="images/EnesErkan.jpeg" alt="">
+          <a class="image__link" href="Enes.php">More İnformation</a>
+        </div>
+      </swiper-slide>
+      <swiper-slide>
+        <div class="image__wrapper">
+          <img src="images/SeydaBurucu.jpeg" alt="">
+          <a class="image__link" href="Seyda.php">More İnformation</a>
+        </div>
+      </swiper-slide>
+      <swiper-slide>
+        <div class="image__wrapper">
+          <img src="images/Tatankalar.jpeg" alt="">
+          <a class="image__link" href="Tatankalar.php">More İnformation</a>
+        </div>
+      </swiper-slide>
+      <swiper-slide>
+        <div class="image__wrapper">
+          <img src="images/KenanSofuoğlu.jpeg" alt="">
+          <a class="image__link" href="Kenan.php">More İnformation</a>
+        </div>
+      </swiper-slide>
+    </swiper-container>
+  </section>
+  <section id="Sakarya__Map" class="Sakarya__Map">
+    <div id="map"></div>
+  </section>
+
+  <footer>
+    <div class="footer__container">
+        <article>
+            <a href="index.php" class="footer__logo"><h3>WhiteMaster</h3></a>
+            <P>You can use below links for contact me</P>
+            <div>
+                <i class='bx bxs-phone-call'></i>
+                <small>+54123309055</small>
+            </div>
+            <div>
+                <i class='bx bx-envelope'></i>
+                <small>Emrekoca005@gmail.com</small>
+            </div>
+        </article>
+
+        <article>
+            <h3>Permalinks</h3>
+            <div class="Pages">
+            <a href="index.php">Home</a>
+            <a href="about.php">About</a>
+            <a href="contact.php">Contact</a>
+        </div>
+        </article>
+
+        <article>
+            <h3>Contact Us</h3>
+            <p>Press</p>
+            <p>FAQs</p>
+            <div class="footer__socials">
+            <a href="#"><i class='bx bxl-linkedin' ></i></a>
+            <a href="#"><i class='bx bxl-twitter' ></i></a>
+            <a href="#"><i class='bx bxl-facebook-circle' ></i></a>
+            <a href="#"><i class='bx bxl-instagram' ></i></a>
+        </div>
+        </article>
+    </div>
+    <div class="copyright">
+        <small>&copy; Copyright Sakarya Website. All Rights Reserved.</small>
+    </div>
+</footer>
+  <script
+    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    crossorigin=""
+  ></script>
+  <script>
+    const mapBounds = [
+      [40, 29.5], // Güneybatı
+      [41.486237, 31.4] // Kuzeydoğu
+    ];
+
+    const map = L.map('map', {
+      center: [40.742623, 30.330722],
+      zoom: 12,
+      maxBounds: mapBounds,
+      maxZoom: 12,
+      minZoom: 10,
+      zoomControl: true
+    });
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 19,
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+    // Marker oluşturma
+    const marker = L.marker([40.7742490720967, 30.40006071093756]).addTo(map);
+    const marker2 = L.marker([40.8163732671634, 30.752312246176473]).addTo(map);
+    const marker3 = L.marker([40.89065383483343, 30.43622463792658]).addTo(map);
+    const marker4 = L.marker([40.73963636475224, 30.37324144740015]).addTo(map);
+    const marker5 = L.marker([40.690631386828564, 30.26804198209599]).addTo(map);
+    const marker6 = L.marker([40.39217154418295, 30.493808711604245]).addTo(map);
+    // Marker'a yazı (popup) ekleme
+    marker.bindPopup("<a href=\"https://www.sakarya.edu.tr/\" target=\"_blank\">Sakarya Müzesi</a>").openPopup();
+    marker2.bindPopup("<a href=\"https://kulturportali.gov.tr/turkiye/sakarya/gezilecekyer/hendek-bayraktepe\" target=\"_blank\">Bayrak Tepe</a>").openPopup();
+    marker3.bindPopup("<a href=\"https://www.sakarya.edu.tr/\" target=\"_blank\">Harmantepe Kalesi</a>").openPopup();
+    marker4.bindPopup("<a href=\"https://www.sakarya.edu.tr/\" target=\"_blank\">Justinaus Köprüsü</a>").openPopup();
+    marker5.bindPopup("<a href=\"https://www.sakarya.edu.tr/\" target=\"_blank\">Cami i Cedid</a>").openPopup();
+    marker6.bindPopup("<a href=\"https://www.sakarya.edu.tr/\" target=\"_blank\">Tarihi Çınar</a>").openPopup();
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+  <script src="main.js"></script>
+</body>
+
+  </html>
